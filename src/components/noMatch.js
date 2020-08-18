@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../src/img/404min.jpg";
+import logo from "../../src/img/404.jpg";
 import "./../css/App.css";
 
 function NoMatch() {

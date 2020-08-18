@@ -1,8 +1,8 @@
 import React from "react";
 import "../src/css/App.css";
-import Menu from "./components/menu";
+
 import Home from "./components/home";
-import About from "./components/about";
+import AboutPage from "./pages/AboutPage";
 import Users from "./components/users";
 import NoMatch from "./components/noMatch";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -29,7 +29,7 @@ function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/about">
-            <About />
+            <AboutPage />
           </Route>
           <Route path="/users">
             <Users />

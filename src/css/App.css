@@ -37,6 +37,13 @@
   }
 }
 
+/* 
 .NoMatch {
   width: 100vw;
+}
+ */
+
+.about-page {
+  background-color: aquamarine;
+  height: calc(100vh - 97px);
 }
