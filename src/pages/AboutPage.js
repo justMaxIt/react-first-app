@@ -8,11 +8,14 @@ function AboutPage() {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
+    if (counter >= 10 && isVisable === true) {
+      setCounter(0);
+    }
     if (isVisable) {
       return () => setCounter(0);
     }
-    if (counter >= 9) {
-      return () => setIsVisable(true);
+    if (counter >= 10) {
+      return setIsVisable(true);
     }
   }, [counter, isVisable]);
 
@@ -26,7 +29,11 @@ function AboutPage() {
       />
       <br />
       <AboutContent counter={counter} />
-      <AboutModal isVisable={isVisable} setIsVisable={setIsVisable} />
+      <AboutModal
+        isVisable={isVisable}
+        setIsVisable={setIsVisable}
+        counter={counter}
+      />
     </div>
   );
 }
