@@ -49,5 +49,29 @@
 }
 
 .about-shuffles {
-  background-color: rgb(39, 243, 21);
+  height: calc(100vh - 97px);
+}
+
+.red {
+  background-color: red;
+  height: 25%;
+  margin: 5px;
+}
+
+.green {
+  background-color: green;
+  height: 25%;
+  margin: 5px;
+}
+
+.blue {
+  background-color: blue;
+  height: 25%;
+  margin: 5px;
+}
+
+.yellow {
+  background-color: yellow;
+  height: 25%;
+  margin: 5px;
 }

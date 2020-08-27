@@ -3,7 +3,8 @@ import Shuffles from "../components/shuffles";
 import "../css/App.css";
 
 function AboutShuffles() {
-  const [color, setColor] = useState(false);
+  // const [blocks, setBlocks] = useState(Array(4).fill(null));
+  const [color, setColor] = useState(["red", "green", "blue", "yellow"]);
   // const [counter, setCounter] = useState(0);
   // const [useCount, setUseCount] = useState([0, 0]);
 
@@ -20,7 +21,7 @@ function AboutShuffles() {
 
   return (
     <div className="about-shuffles">
-      <Shuffles />
+      <Shuffles color={color} />
     </div>
   );
 }
