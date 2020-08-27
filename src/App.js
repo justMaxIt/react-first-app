@@ -3,9 +3,11 @@ import "../src/css/App.css";
 
 import Home from "./components/home";
 import AboutPage from "./pages/AboutPage";
+import AboutShuffles from "./pages/AboutShuffles";
 import Users from "./components/users";
 import NoMatch from "./components/noMatch";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Shuffles from "./components/shuffles";
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
             <li>
               <Link to="/users">Users</Link>
             </li>
+            <li>
+              <Link to="/shuffles">Shuffles</Link>
+            </li>
           </ul>
         </nav>
 
@@ -33,6 +38,9 @@ function App() {
           </Route>
           <Route path="/users">
             <Users />
+          </Route>
+          <Route path="/shuffles">
+            <AboutShuffles />
           </Route>
           <Route exact path="/">
             <Home />

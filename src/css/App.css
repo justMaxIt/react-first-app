@@ -47,3 +47,7 @@
   background-color: aquamarine;
   height: calc(100vh - 97px);
 }
+
+.about-shuffles {
+  background-color: rgb(39, 243, 21);
+}
