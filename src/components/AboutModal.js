@@ -1,7 +1,7 @@
 import React from "react";
 
 function AboutModal(props) {
-  const { isVisable, setIsVisable, counter } = props;
+  const { isVisable, setIsVisable, useCount, counter, setCounter } = props;
   if (isVisable) {
     return (
       <div
@@ -26,9 +26,22 @@ function AboutModal(props) {
             border: "2px solid #444",
           }}
         >
-           
-         Counter value: {counter} <br />
-          <button onClick={() => setIsVisable(false)}>Close</button>
+          First counter: {useCount[0]}
+          <br />
+          Second counter: {useCount[1]}
+          <br />
+          <button
+            onClick={() => {
+              if (counter >= 10) {
+                setCounter(0);
+                setIsVisable(false);
+              } else {
+                setIsVisable(false);
+              }
+            }}
+          >
+            Close
+          </button>
         </div>
       </div>
     );

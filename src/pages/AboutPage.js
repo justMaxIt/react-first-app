@@ -6,18 +6,18 @@ import AboutModal from "../components/AboutModal";
 function AboutPage() {
   const [isVisable, setIsVisable] = useState(false);
   const [counter, setCounter] = useState(0);
+  const [useCount, setUseCount] = useState([0, 0]);
 
   useEffect(() => {
-    if (counter >= 10 && isVisable === true) {
+    if (useCount[1] >= 1 && counter === 0) {
       setCounter(0);
+      setUseCount([useCount[0] + 1, useCount[1]]);
     }
-    if (isVisable) {
-      return () => setCounter(0);
+    if (counter >= 10 && !isVisable) {
+      setIsVisable(true);
+      setUseCount([useCount[0], useCount[1] + 1]);
     }
-    if (counter >= 10) {
-      return setIsVisable(true);
-    }
-  }, [counter, isVisable]);
+  }, [counter]);
 
   return (
     <div className="about-page">
@@ -32,7 +32,9 @@ function AboutPage() {
       <AboutModal
         isVisable={isVisable}
         setIsVisable={setIsVisable}
+        useCount={useCount}
         counter={counter}
+        setCounter={setCounter}
       />
     </div>
   );
