@@ -2,26 +2,33 @@ import React from "react";
 import "../css/App.css";
 
 function Shuffles(props) {
-  const { color, setChange, setLastClick } = props;
+  const {
+    color,
+    setChangeFirst,
+    setChangeSecond,
+    setChangeThird,
+    setLastClick,
+  } = props;
 
   return (
     <>
       <div
         className={color[0]}
         onClick={() => {
-          setChange(true);
+          // setChange(true);
+          setChangeFirst(true);
         }}
       ></div>
       <div
         className={color[1]}
         onClick={() => {
-          setChange(true);
+          setChangeSecond(true);
         }}
       ></div>
       <div
         className={color[2]}
         onClick={() => {
-          setChange(true);
+          setChangeThird(true);
         }}
       ></div>
       <div
